@@ -1,0 +1,304 @@
+****************************************************************InventoryHome**************************************************************************************
+*{
+	
+	padding : 0;
+	margin:0;
+	list-style:none;
+	box-sizing:border-box;
+	text-decoration:none;
+}
+
+nav{
+	
+	background:black;
+	height:100px;
+	width:100%;
+	
+}
+
+label.logo{
+	
+	color:white;
+	font-size:50px;
+	line-height:80px;
+	padding:0 100px;
+	font-weight: bold;
+	
+}
+nav ul{
+	float:right;
+	margin-right:20px;
+	
+}
+nav ul li{
+	
+	display : inline-block;
+	line-height:80px;
+	margin:0 5px;
+}
+nav ul li a{
+	
+	color:white;
+	font-size: 17px;
+	
+}
+
+
+#Header
+{
+	height: 200px;
+  background-image: linear-gradient(to right, #00d2ff,#3a7bd5);
+  padding : 100px 10px 10px 10px;
+  justify-content: center;
+  
+}
+#typewriter{
+	
+	animation : type 3.9s steps(38) 0.5s 1 normal both;
+	overflow : hidden;
+	white-space:nowrap;
+	font-family: Courier;
+	blink-caret .75s step-end infinite;
+	font-size : 55px;
+	margin: 0 auto;
+	border-right: .15em solid black;
+	
+}
+@keyframes type {
+	from{ width : 0}
+	to { width : 100%}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+#typewriter2{
+	
+	animation : type 3.9s steps(163) 1s 1 normal both;
+	overflow : hidden;
+	white-space:nowrap;
+	font-family: Monospace;
+	blink-caret .75s step-end infinite;
+	font-size : 20px;
+	margin: 0 auto;
+	border-right: .15em solid black;
+	
+}
+@keyframes type {
+	from{ width : 0}
+	to { width : 100%}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+body
+{
+	display : flex ;
+	justify-content:center;
+	align-items : center;
+	flex-wrap:wrap;
+	min-height: 150vh;
+	background-image: linear-gradient(to right,#00d2ff,#3a7bd5);
+	
+}
+
+
+.row1
+{
+	position :relative;
+	width: 300px;
+	height:300px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	margin:40px;
+	background:#060c21;
+	transition: 0.5s;
+}
+
+.row1:hover
+{
+	height:400px;
+	
+}
+
+
+.row1 .column1
+{
+	position: absolute;
+	top : 0;
+	left :0;
+	width :100%;
+	height: 100%;
+	padding :10px;
+	box-sizing:border-box;
+	
+}
+
+.row1 .column1 img
+
+{
+	max-width: 100%;
+	opacity : 0.3;
+	transition : 0.5s;
+	
+}
+
+.row1:hover .column1 img
+
+{
+	opacity:1;
+
+}
+ 
+.row1::before
+
+{
+	content : '';
+	position : absolute;
+	top : -2px;
+	left:-2px;
+	right:-2px;
+	bottom:-2px;
+	background:#fff;
+	z-index :-1;
+	
+}
+
+row1::after
+
+{
+	content : '';
+	position : absolute;
+	top : -2px;
+	left:-2px;
+	right:-2px;
+	bottom:-2px;
+	background:#fff;
+	z-index :-2;
+	filter:blur(40px);
+	
+}
+
+.row1::before,
+.row1::after
+{
+	background: linear-gradient(235deg,#3D7EAA,#FFE47A);
+	
+}
+
+.row1:nth-child(2):before,
+.row1:nth-child(2):after
+{
+	background: linear-gradient(235deg,#5C258D,#4389A2);
+	
+}
+.row1:nth-child(3):before,
+.row1:nth-child(3):after
+{
+	background: linear-gradient(235deg,#DC2424,#4A569D);
+	
+}
+
+
+.row1 .content
+
+{
+	position : absolute;
+	bottom : 0;
+	left : 10px;
+	right :10px;
+	bottom :10px;
+	height:90px;
+	background:rgba(0,0,0,0.4);
+	display:flex;
+	justify-content:center;
+	align-item:center;
+	opacity:0;
+	transition: 0.5s;
+	
+}
+.row1:hover .content
+
+{
+	opacity : 1;
+}
+
+
+.row1 .content h2
+
+{
+	font-size :20px;
+	color :#fff;
+	font-weight:500;
+	line-height:20px;
+	letter-spacing:1px;
+}	
+
+
+.row1 .content h2 span
+
+{
+	font-size :14px;
+	color :#fff;
+	font-weight:500;
+	line-height:20px;
+	letter-spacing:2px;
+	
+}
+
+
+.link{
+	justify-content:center;
+	position : Relative;
+	background-color:black;
+	color:white;
+	top : 100px;
+	height: 300px;
+	width:100%;
+	text-align:center;
+}
+
+a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+a::after{
+  content: "";
+  background: white;
+	mix-blend-mode: exclusion;
+  width: calc(100% + 20px);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+a:hover::after{
+	height: calc(100% + 30px)
+}
+
+.footer {
+   position: relative;
+   top: 150px;
+   left: 0;
+   bottom: 10;
+   width: 100%;
+   background-color: black ;
+   color: white;
+   text-align: center;
+}
+
+
+
+********************************************************************************************************************************************************************
+
