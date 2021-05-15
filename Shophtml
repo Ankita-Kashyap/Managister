@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SHOP @ INVENTORY</title>
+		<meta charset="utf-8">
+		<link rel ="stylesheet" href = "Shop1.css">
+    </head>
+	<body style =" background-image: linear-gradient(to right, #00d2ff,#3a7bd5);">
+	
+		<nav>
+			<label class ="logo">Managister</label>
+				<ul>
+					<li><a href ="">HOME</a></li>
+					<li><a href ="{{ url_for('displayClients') }}">CLIENT</a></li>
+					<li><a href ="{{ url_for('sold') }}">SHOP</a></li>
+					<li><a href ="{{ url_for('displayInventory') }}">STORE</a></li>
+				</ul>
+		</nav>
+		
+		<br>
+		<br>
+		<br>
+		
+    <header>
+        <h1 id = "Header">ENTER THE ITEM(S) YOU WISH TO BUY FROM OUR INVENTORY</h1>
+    </header>
+	
+	<br><br>
+		<div class= "align">
+			<div class = "form1">
+        <form  method="POST" action="./insertSold">
+            <input class = "textbox" type = "number"  id="sold_id" name="sold_id" placeholder="Sold ID">
+            <br><br>
+            <input class = "textbox" type = "text"  id="sold_date" name="sold_date" placeholder="Sold Date">
+            <br><br>
+            <input class = "textbox" type = "number"  id="sold_capacity" name="sold_capacity" placeholder="How many units?">
+            <br><br>
+            <input class = "textbox" type ="number"  id="item_id" name="item_id" placeholder="Item ID">
+            <br><br>
+            <input class = "textbox" type="submit" value="Submit"> 
+        </form>
+		</div >
+		<div class = "form1">
+		<script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/yeallgsa.json"
+    trigger="loop"
+    colors="primary:#121331,secondary:#242424"
+    stroke="86"
+    scale="49"
+    axis-x="44"
+    axis-y="48"
+    style="width:250px;height:250px">
+</lord-icon>
+	  </div>
+	  <div class = "form1">
+	  <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/cjieiyzp.json"
+    trigger="loop"
+    colors="primary:#121331,secondary:#000000"
+    stroke="54"
+    scale="61"
+    style="width:250px;height:250px">
+</lord-icon>
+</div>
+	  </div>
+        <br>
+        <br>
+        <h1 id = "shoppe">SHOP CART</h1>
+        <br>
+        <br>
+	
+        <table>
+            <thead>
+                <tr>
+                    <th>BARCODE</th>
+                    <th>DATE</th>
+                    <th>UNITS</th>
+                </tr>
+            </thead>
+            <tbody>
+                &emsp;{% for i in sold %}
+                <tr>
+                    <td>{{i.sold_id}}&emsp;</td>
+                    <td>&emsp;{{i.sold_date}}&emsp;</td>
+                    <td>&emsp;{{i.sold_capacity}}</td>
+                </tr>
+                &emsp;{%  endfor %}
+            </tbody>
+        </table>
+		
+    </body>
+    <div class ="footer"> 
+					
+					<p>Made by Ankita Kashyap & Mann Bajpai</p>
+					
+			</div>
+</html>
