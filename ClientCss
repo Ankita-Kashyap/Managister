@@ -1,0 +1,148 @@
+
+*{
+	
+	padding : 0;
+	margin:0;
+	list-style:none;
+	box-sizing:border-box;
+	text-decoration:none;
+}
+
+nav{
+	
+	background:black;
+	height:85px;
+	width:100%;
+	
+}
+
+label.logo{
+	
+	color:white;
+	font-size:50px;
+	line-height:80px;
+	padding:0 100px;
+	font-weight: bold;
+	
+}
+nav ul{
+	float:right;
+	margin-right:20px;
+	
+}
+nav ul li{
+	
+	display : inline-block;
+	line-height:80px;
+	margin:0 5px;
+}
+nav ul li a{
+	
+	color:white;
+	font-size: 17px;
+	
+}
+
+
+
+
+a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+a::after{
+  content: "";
+  background: white;
+	mix-blend-mode: exclusion;
+  width: calc(100% + 20px);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+a:hover::after{
+	height: calc(100% + 30px)
+}
+
+
+
+
+h1{
+	
+	text-decoration: underline;
+}
+.text-longshadow{
+  color: #fff;
+  font-size: 8rem; 
+  line-height: 8rem;
+  font-family: lato;
+  font-weight: 900;
+  text-align: center;
+  @include text-shadow(longshadow(darken($bg,30%),$bg,50, 0.5));
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  border-color:black;
+  
+}
+th
+  {
+    background-color: black;
+	color:white;
+  }
+  
+  .textbox1 {
+	border: 3px double #848484;
+	outline:0;
+	height:25px;
+	width: 275px;
+}
+
+input[type=submit],[type=delete]{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+hr{
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.footer {
+   position: relative;
+   top: 250px;
+   left: 0;
+   bottom: 10;
+   width: 100%;
+   background-color: black ;
+   color: white;
+   text-align: center;
+}
+}
