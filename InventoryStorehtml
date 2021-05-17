@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INVENTORY INFO</title>
+		<link rel ="stylesheet" href = "InventoryStore.css">
+    </head>
+	
+	
+	<nav>
+			<label class ="logo">Managister</label>
+				<ul>
+					<li><a href ="">HOME</a></li>
+					<li><a href ="{{ url_for('displayClients') }}">CLIENT</a></li>
+					<li><a href ="{{ url_for('sold') }}">SHOP</a></li>
+					<li><a href ="{{ url_for('displayInventory') }}">STORE</a></li>
+				</ul>
+		</nav>
+		
+		<br><br><br>
+    <header>
+        <h1>THE ITEMS ARE AS FOLLOWS:-</h1>
+    </header>
+	
+    <body style =" background-image: linear-gradient(to right, #00d2ff,#3a7bd5);">
+    <br>   
+		
+	<div class = "photo">
+	<div class = "gif">
+	   <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PRICE</th>
+                    <th>CAPACITY</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+				<br><br>
+                <tr>
+                    <td>{{item.item_id}}</td>
+                    <td>{{item.item_name}}</td>
+                    <td>{{item.item_price}}</td>
+                    <td>{{item.item_capacity}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+		</div>
+		
+		<div class = "gif">
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/dnoiydox.json"
+    trigger="loop"
+    colors="primary:#121331,secondary:#08a88a"
+    scale="41"
+    style="width:250px;height:250px">
+</lord-icon>
+</div>
+
+	<div class ="gif">
+<script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/nocovwne.json"
+    trigger="loop"
+    colors="primary:#121331,secondary:#08a88a"
+    scale="43"
+    style="width:250px;height:250px">
+</lord-icon>
+</div>
+</div>
+	</body>
+	
+	<div class ="footer"> 
+					
+					<p>Made by Ankita Kashyap and Mann Bajpai</p>
+					
+			</div>
+	
+</html>
